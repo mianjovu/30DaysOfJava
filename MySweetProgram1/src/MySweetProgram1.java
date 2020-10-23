@@ -1,25 +1,25 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
 public class MySweetProgram1 {
-
-	public static void main(String[] args) throws FileNotFoundException {
+	
+	public static void main(String[] args)  {
 		
-	    Scanner in = new Scanner(new File("Students.txt"));
-	    
-	    List<String> students = new ArrayList<String>();
-	    
-	    while(in.hasNextLine()) {
-	    	students.add(in.nextLine());
-	    }
-	    
-	    for(int i = 0; i < students.size(); i++) {
-	    	System.out.println("name: " + students .get(i));
-	    	
-	    }
-	    in.close();
+		
+		LinkedList<String> names = new LinkedList<String>();
+		names.push("Mia");
+		names.push("Sue");
+		names.push("Sally");
+		
+		System.out.println(names.pop());
+		System.out.println(names.removeFirst());
+		System.out.println(names.remove());
+		
 	}
+	
 }
